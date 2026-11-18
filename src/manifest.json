@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Framefold for YouTube",
+  "short_name": "Framefold · YouTube",
+  "version": "0.1.0",
+  "description": "给 YouTube 换一个更清晰的界面：编辑式排版、液态玻璃控件与动态背景。非官方，与 YouTube 无关。",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "action": {
+    "default_title": "Framefold for YouTube",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-tab-32.png",
+      "32": "icons/icon-tab-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

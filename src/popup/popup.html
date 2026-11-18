@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Framefold for YouTube</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="head">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 512 512" width="21" height="21">
+          <rect x="96" y="120" width="44" height="272" rx="22" fill="currentColor" />
+          <rect x="372" y="120" width="44" height="272" rx="22" fill="currentColor" />
+          <path d="M204 160 L352 256 L204 352 Z" fill="#d0402f" />
+        </svg>
+      </div>
+      <div class="title">
+        <h1>Framefold</h1>
+        <p>FOR YOUTUBE</p>
+      </div>
+    </header>
+
+    <main>
+      <label class="row">
+        <span class="label">启用重设计</span>
+        <input type="checkbox" id="enabled" class="switch" />
+      </label>
+
+      <section class="block" id="appearance">
+        <h2>外观</h2>
+        <div class="seg" id="theme" role="radiogroup" aria-label="主题">
+          <button type="button" data-theme="auto" role="radio">跟随</button>
+          <button type="button" data-theme="light" role="radio">浅色</button>
+          <button type="button" data-theme="dark" role="radio">暗色</button>
+        </div>
+      </section>
+
+      <section class="block" id="background">
+        <h2>动态背景</h2>
+        <div class="swatches" id="bg" role="radiogroup" aria-label="背景"></div>
+        <label class="row slider">
+          <span class="label">强度</span>
+          <input type="range" id="intensity" min="0" max="100" step="5" />
+        </label>
+      </section>
+
+      <label class="row">
+        <span class="label">玻璃折射</span>
+        <input type="checkbox" id="glass" class="switch" />
+      </label>
+    </main>
+
+    <footer>
+      <span>非官方 · 设计来自映间 MARGIN</span>
+      <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">打开 YouTube</a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
